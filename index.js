@@ -1,7 +1,7 @@
 const { Server } = require("socket.io");
 
 //creating the server connected
-const io = new Server("https://videocallfrontapp.onrender.com/", {
+const io = new Server(8000, {
   cors: true,
 });
 
