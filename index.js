@@ -1,7 +1,7 @@
 const { Server } = require("socket.io");
 
 //creating the server connected
-const io = new Server(8000, {
+const io = new Server("https://videocallfrontapp.onrender.com/", {
   cors: true,
 });
 
@@ -42,4 +42,3 @@ io.on("connection", (socket) => {
     io.to(to).emit("peer:nego:final", { from: socket.id, ans });
   });
 });
- 
